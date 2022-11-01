@@ -2,7 +2,7 @@
 
 const comida1 = {
     nombre: "Hamburguesa con queso",
-    tipo: "Comida",
+    tipo: "comida",
     ingredientes: "Hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup",
     precio: 590
 }
@@ -16,21 +16,21 @@ const comida2 = {
 
 const comida3 = {
     nombre: "Triple hamburguesa con queso",
-    tipo: "Comida",
+    tipo: "comida",
     ingredientes: "Triple hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup",
     precio: 860
 }
 
 const comida4 = {
     nombre: "Cuarto de libra",
-    tipo: "Comida",
+    tipo: "comida",
     ingredientes: "Hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup",
     precio: 860
 }
 
 const comida5 = {
     nombre: "Doble cuarto de libra",
-    tipo: "Comida",
+    tipo: "comida",
     ingredientes: "Doble hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup",
     precio: 1190
 }
@@ -182,7 +182,7 @@ const acompañamiento6 = {
 
 const menu = ["Comida y platos principales", "Acompañamientos", "Bebidas",]
 
-const arrmenu = [comida1, comida2, comida3, comida4, comida5, comida6, comida7, comida7, comida9, comida10, comida11, comida12, bebida1, bebida2, bebida3, bebida4, bebida5, bebida6, bebida7, bebida8, bebida9, acompañamiento1, acompañamiento2, acompañamiento3, acompañamiento4, acompañamiento5, acompañamiento6]
+const arrmenu = [comida1, comida2, comida3, comida4, comida5, comida6, comida7, comida8, comida9, comida10, comida11, comida12, bebida1, bebida2, bebida3, bebida4, bebida5, bebida6, bebida7, bebida8, bebida9, acompañamiento1, acompañamiento2, acompañamiento3, acompañamiento4, acompañamiento5, acompañamiento6]
 const pedido = []
 
 //programa
@@ -205,26 +205,86 @@ function VerMenu() {
     }
     else if (menuelegido === "2") {
         for (let i = 0; i < resultado2.length; i++) {
-            console.log([i + 1] + " - " + resultado2[i].nombre + " / Precio: $" + resultado2[i].precio)
+            console.log([i + 13] + " - " + resultado2[i].nombre + " / Precio: $" + resultado2[i].precio)
         }
     }
     else if (menuelegido === "3") {
         for (let i = 0; i < resultado3.length; i++) {
-            console.log([i + 1] + " - " + resultado3[i].nombre + " / Ingredientes: " + resultado3[i].ingredientes + " / Precio: $" + resultado3[i].precio)
+            console.log([i + 22] + " - " + resultado3[i].nombre + " / Ingredientes: " + resultado3[i].ingredientes + " / Precio: $" + resultado3[i].precio)
         }
     }
 }
+    let productoelegido
 
 function AgregarProducto() {
-    let productoelegido = Number(prompt("Escrba el valor del producto que desea comprar"))
-    pedido.push(productoelegido)
-    
+     productoelegido = Number(prompt("Escriba el número del producto que desea comprar"))
+    pushprecio()
+
     do {
-        productoelegido = Number(prompt("Si desea sumar otro producto escriba el valor del producto. Si desea saber el total de la orden escriba 0"))
-        pedido.push(productoelegido)
+        productoelegido = Number(prompt("Si desea sumar otro producto escriba el número del producto. Si desea saber el total de la orden escriba 0"))
+        pushprecio()
     } while (productoelegido !== 0)
 
     let total = pedido.reduce((a, b) => a + b, 0);
     alert("El total de su pedido es: $" + total)
 }
 
+function pushprecio (){
+    if (productoelegido == 1){
+        pedido.push(comida1.precio)
+    } else if (productoelegido == 2) {
+        pedido.push(comida2.precio)
+    } else if (productoelegido == 3) {
+        pedido.push(comida3.precio)
+    }else if (productoelegido == 4) {
+        pedido.push(comida4.precio)
+    }else if (productoelegido == 5) {
+        pedido.push(comida5.precio)
+    }else if (productoelegido == 6) {
+        pedido.push(comida6.precio)
+    }else if (productoelegido == 7) {
+        pedido.push(comida7.precio)
+    }else if (productoelegido == 8) {
+        pedido.push(comida8.precio)
+    }else if (productoelegido == 9) {
+        pedido.push(comida9.precio)
+    }else if (productoelegido == 10) {
+        pedido.push(comida10.precio)
+    }else if (productoelegido == 11) {
+        pedido.push(comida11.precio)
+    }else if (productoelegido == 12) {
+        pedido.push(comida12.precio)
+    }else if (productoelegido == 13) {
+        pedido.push(bebida1.precio)
+    }else if (productoelegido == 14) {
+        pedido.push(bebida2.precio)
+    }else if (productoelegido == 15) {
+        pedido.push(bebida3.precio)
+    }else if (productoelegido == 16) {
+        pedido.push(bebida4.precio)
+    }else if (productoelegido == 17) {
+        pedido.push(bebida5.precio)
+    }else if (productoelegido == 18) {
+        pedido.push(bebida6.precio)
+    }else if (productoelegido == 19) {
+        pedido.push(bebida7.precio)
+    }else if (productoelegido == 20) {
+        pedido.push(bebida8.precio)
+    }else if (productoelegido == 21) {
+        pedido.push(bebida9.precio)
+    }else if (productoelegido == 22) {
+        pedido.push(acompañamiento1.precio)
+    }else if (productoelegido == 23) {
+        pedido.push(acompañamiento2.precio)
+    }else if (productoelegido == 24) {
+        pedido.push(acompañamiento3.precio)
+    }else if (productoelegido == 25) {
+        pedido.push(acompañamiento4.precio)
+    }else if (productoelegido == 26) {
+        pedido.push(acompañamiento5.precio)
+    }else if (productoelegido == 27) {
+        pedido.push(acompañamiento6.precio)
+    } else if (productoelegido > 27) {
+        alert("coloque un número que corresponda a alguno de nuestros productos del menú")
+    }
+}
