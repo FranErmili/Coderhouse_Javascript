@@ -104,32 +104,40 @@ for (const boton of botones) {
     }
 }
 
-// Función para renderizar las cards del carrito.
 function renderizarCarrito() {
-    let contenedorProductosAgregados = document.getElementById("contenedorProductosAgregados")
-    
-  let total = 0
-
-  for (const item of carritoGuardado) {
-    total += item.subtotal
-    contenedorProductosAgregados.innerHTML += `
-      <div class="card item-carrito">
-            <img class="img-carrito" src=${item.img}></img
-            <h4 class="card-tittle">${item.nombre}</h4>
-            <h4 class="card-tittle">${item.precioUnitario}
-            <h4 class="card-tittle">${item.unidades}</h4>
-            <h5>$ ${item.subtotal}</h5>
-            <button class="btn btn-outline-dark"> + </button>
-            <button class="btn btn-outline-dark"> - </button>
-        </div>
+    contenedorProductosAgregados.innerHTML = `
+      <div class="title-carrito">
+        <p>nombre</p>
+        <p>precioUnidad</p>
+        <p>unidades</p>
+        <p>subtotal</p>
+      </div>
     `
-  }
-  contenedorProductosAgregados.innerHTML += `
-    <div class="itemCarrito">
-      <h3>total: ${total}</h3>
-    </div>
-  `
+    let total = 0
+    for (const item of carritoGuardado) {
+      total += item.subtotal
+      contenedorProductosAgregados.innerHTML += `
+        <div class="card item-carrito">
+          <img class="img-carrito" src=${item.img}></img>
+          <h4 class="card-tittle">${item.nombre}</h4>
+          <h4 class="card-tittle">${item.precioUnitario}</h4>
+          <h4 class="card-tittle">${item.unidades}</h4>
+          <h5>$ ${item.subtotal}</h5>
+          <button class="btn btn-outline-dark"> + </button>
+          <button id:"${item.id}" class="btn btn-outline-dark restar-producto"> - </button>
+        </div>
+      `
+    }
+    contenedorProductosAgregados.innerHTML += `
+      <div class="total-pedido">
+        <h3>Total: $ ${total}</h3>
+      </div>
+    `
 }
+
+let restarProducto = document.getElementsByClassName("restar-producto")
+
+
 
 //función para abrir y cerrar el modal del carrito
 
@@ -143,5 +151,6 @@ abrirCarrito.onclick = () => {
 cerrarCarrito.onclick = () => {
     carrito.classList.add("none")
 }
+
 
 
