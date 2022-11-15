@@ -2,21 +2,59 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Frani´s Burguer</title>
-  <script src="js.js"></script>
+    <meta charset="UTF-8">
+    <title>Frani's Burguer</title>
+    <link rel="shortcut icon" href="./img/favicon .png">
 
+    <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="main-background">
-    <h1>Frani´s Burguer</h1>
-    <h2>Esto es un simulador de una app de pedidos</h2>
+<body>
+    <header>
+        <div id="navbar-container">
+            <div class="navbar container">
+                <a class="navbar-brand" href="">
+                    <img class="brand-logo" src="./img/FireBurger.png">
+                    </img></a>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <button id="btn-productos" class="nav-link active">Menu</button>
+                    </li>
 
-    <h3>Con el botón VER MENÚ verás el menú por consola</h3>
-    <h3>Con el botón AGREGAR PRODUCTOS el programa realizará la suma del pedido</h3>
+                    <form class="form-inline">
+                        <input id="busqueda" class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button id="btn-buscar" class="btn btn-outline-primary my-2 my-sm-0"
+                            type="submit">Search</button>
+                    </form>
+                </ul>
 
-  <button type="button" onclick="VerMenu()">Ver Menú</button>
-  <button type="button" onclick="AgregarProducto()">Agregar Producto</button>
+                <div>
+                    <button type="button" class="btn btn-outline-warning">Iniciar sesión</button>
+                    <button id="abrir-carrito" type="button" class="btn btn-outline-danger">Ver pedido</button>
+                </div>
+            </div>
+            
+        </div>
 
+    </header>
+
+    <main>
+
+        <body>
+            <div id="container-productos" class="container"></div>
+            <div id="carrito" class="modal-carrito none">
+                <div class="container modal-nav">
+                    <h3>Productos agregados al pedido</h3>
+                    <button id="cerrar-carrito" type="button" class="btn btn-outline-dark" >Cerrar</button>
+                </div>
+            </div>
+        </body>
+    </main>
+
+    <script src="/js/main.js"></script>
+
+    <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
