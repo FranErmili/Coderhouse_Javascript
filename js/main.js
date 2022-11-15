@@ -1,8 +1,8 @@
 //Array de objetos de todos los productos
 const productos = [
-    { id: 1, nombre: "Hamburguesa con queso", precio: 590, ingredientes: "Hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/1-min.png" },
-    { id: 2, nombre: "Doble hamburguesa con queso", precio: 725, ingredientes: "Doble hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/2-min.png" },
-    { id: 3, nombre: "Triple hamburguesa con queso", precio: 860, ingredientes: "Triple hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/3-min.png" },
+    { id: 1, nombre: "Hamburguesa con queso", precio: 590, ingredientes: "Hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: ".img/1-min.png" },
+    { id: 2, nombre: "Doble hamburguesa con queso", precio: 725, ingredientes: "Doble hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: ".img/2-min.png" },
+    { id: 3, nombre: "Triple hamburguesa con queso", precio: 860, ingredientes: "Triple hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: ".img/3-min.png" },
     { id: 4, nombre: "Cuarto de Libra", precio: 860, ingredientes: "Hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/4-min.png" },
     { id: 5, nombre: "Doble cuarto de Libra", precio: 1130, ingredientes: "Doble hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/5-min.png" },
     { id: 6, nombre: "Triple cuarto de Libra", precio: 1230, ingredientes: "Triple hamburguesa de carne con queso cheddar, cebolla, mostaza y keptchup", tipo: "hamburguesas", imgUrl: "./img/6-min.png" },
