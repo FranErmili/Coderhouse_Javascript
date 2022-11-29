@@ -11,53 +11,95 @@
 </head>
 
 <body>
+
     <header>
-        <div id="navbar-container">
-            <div class="navbar container">
-                <a class="navbar-brand" href="">
-                    <img class="brand-logo" src="./img/FireBurger.png">
-                    </img></a>
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <button id="btn-productos" class="nav-link active">Menu</button>
-                    </li>
+        <div class="navbar-container container-fluid">
+            <div class="navbar">
+                <div class="logo-container ">
+                    <img class="brand-logo" src="./img/FireBurger.png"></img>
+                </div>
 
-                    <form class="form-inline">
-                        <input id="busqueda" class="form-control mr-sm-2" type="text" placeholder="Categorías">
-                        <button id="btn-buscar" class="btn btn-outline-primary my-2 my-sm-0"
-                            type="button">Buscar</button>
-                    </form>
-                </ul>
+                <div class="main-tittle-container ">
+                    <h1>
+                        Inicia tu pedido
+                    </h1>
 
-                <div>
-                    <button type="button" class="btn btn-outline-warning">Iniciar sesión</button>
-                    <button id="abrir-carrito" type="button" class="btn btn-outline-danger">Ver pedido</button>
+                </div>
+                <div class="nav-buttons">
+                    <div class="btn-login-container">
+                        <button type="button" class="btn btn-outline-warning">Entrar</button>
+                    </div>
+
+                    <div class="btn-carrito-container">
+                        <button id="abrir-carrito" type="button" class="btn btn-outline-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                                </path>
+                            </svg></button>
+                    </div>
                 </div>
             </div>
-            
-        </div>
 
+            <div class="menu-container container-fluid">
+                <ul class="items-filter-container">
+
+                    <li class="menu-item ">
+                        <button id="filtro-promociones" type="button" class="btn btn-filter">Promociones</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-combos" type="button" class="btn btn-filter">Combos</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-sandwiches-snacks" type="button" class="btn btn-filter">Sandwiches y
+                            Snacks</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-acompañamientos" type="button"
+                            class="btn btn-filter">Acompañamientos</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-bebidas" type="button" class="btn btn-filter">Bebidas frías y
+                            calientes</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-helados" type="button" class="btn btn-filter">Helados</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-ensaladas" type="button" class="btn btn-filter">Ensaladas</button>
+                    </li>
+
+                    <li class="menu-item ">
+                        <button id="filtro-desayuno" type="button" class="btn btn-filter">Desayunos y Meriendas</button>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
     </header>
 
     <main>
-
-        <body>
-            <div id="container-productos" class="container"></div>
-            <div id="carrito" class="modal-carrito none">
-                <div class="container modal-nav">
-                    <div class="contener-title-btn-carrito">
-                        <h3 class="modal-title">Productos agregados al pedido</h3>
-                        <button id="cerrar-carrito" type="button" class="btn btn-outline-light" >Cerrar</button>
-                    </div>
-                    <div id="contenedorProductosAgregados"></div>
-                </div>
-            </div>
-        </body>
+        <div id="container-productos" class="container"></div>
     </main>
 
-    <script src="./js/main.js"></script>
+    <footer>
+        <div class="footer">
+            <span>Página de prueba realizada- Derechos reservados Francisco Ermili - 2022 </span>
+            
+        </div>
+    </footer>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
     <script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
